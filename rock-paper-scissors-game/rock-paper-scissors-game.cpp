@@ -168,7 +168,7 @@ void resetScreen() {
 }
 
 void startGame() {
-	bool playAgain = true;
+	char playAgain = 'Y';
 	do {
 		resetScreen();
 		gameResult result = playGame();
@@ -178,7 +178,7 @@ void startGame() {
 		cout << tabs(5) << "Do You Want To Play Again (Y/N) ? ";
 		cin >> playAgain;
 
-	} while (playAgain == true);
+	} while (playAgain == 'Y' || playAgain == 'y');
 }
 
 
@@ -187,5 +187,6 @@ void startGame() {
 int main() {
 
 	startGame();
+	
 
 }
